@@ -948,7 +948,7 @@ if (sendDetails) {
       /* WhatsApp message */
 
       const message = `
-🌸 FIRST SALARY DATE 🌸
+🌸 FIRST SALARY CELEBRATION 🌸
 
 ✈️ FIRST SALARY EXPRESS
 
@@ -968,19 +968,10 @@ ${plans}
 ITC Grand Chola 😊
 
 💸 Sponsor
-First Salary™
+🐶 Shiro™
 
-🟢 BOARDING CONFIRMED
-
-Alright crew… 🤩 🤩
-
-We have the passengers.
-We have the dates.
-We have the plan.
-
-Now all that's left is...
-
-ou gals showing up 😂 🥂 🎉
+💸 Co Sponsor
+🐼 Panda
       `.trim();
 
 

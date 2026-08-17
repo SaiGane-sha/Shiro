@@ -836,13 +836,18 @@ body {
     font-size: 16px;
   }
 
-  .boarding-route {
-    flex-direction: column;
-  }
+.boarding-route {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
 
-  .route-line {
-    transform: rotate(90deg);
-  }
+.route-line {
+  transform: none;
+  font-size: 12px;
+  white-space: nowrap;
+}
 
   .boarding-info {
     grid-template-columns: 1fr;
@@ -860,6 +865,35 @@ body {
 
   .final-row strong {
     text-align: left;
+  }
+
+}
+
+/* =========================================
+   SALARY QUOTE — KEEP ON ONE LINE
+========================================= */
+
+.salary-quote {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.salary-quote strong {
+  white-space: nowrap;
+}
+
+
+@media (max-width: 600px) {
+
+  .salary-quote {
+    gap: 6px;
+    padding: 18px 8px;
+    font-size: 16px;
+  }
+
+  .salary-quote strong {
+    white-space: nowrap;
+    font-size: 16px;
   }
 
 }
