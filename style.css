@@ -1,0 +1,865 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family:
+    "Nunito",
+    sans-serif;
+
+  overflow-x: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd6e7,
+      #ffc2d8,
+      #f8b4d9
+    );
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.page {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 30px 15px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+  width: 100%;
+  max-width: 700px;
+
+  background: rgba(255, 250, 252, 0.96);
+
+  border-radius: 30px;
+
+  padding: 40px 30px;
+
+  box-shadow:
+    0 20px 60px rgba(180, 50, 100, 0.15);
+
+  text-align: center;
+
+  overflow: visible;
+}
+
+
+/* =========================================
+   SCREENS
+========================================= */
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.badge {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  border-radius: 50px;
+
+  background: #fff0f5;
+
+  color: #e24578;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.header_text {
+  margin: 10px 0 15px;
+
+  color: #b52f63;
+
+  font-size: 42px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.subtitle {
+  color: #8f5269;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  margin: 10px 0 20px;
+}
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.question {
+  color: #c23b6d;
+
+  margin: 25px 0;
+
+  font-size: 25px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   GIF
+========================================= */
+
+.gif_container {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: 20px 0;
+}
+
+.gif_container img {
+  width: 250px;
+
+  max-width: 80%;
+
+  border-radius: 20px;
+}
+
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 25px;
+
+  min-height: 80px;
+
+  margin-top: 25px;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+
+/* =========================================
+   ALL BUTTONS
+========================================= */
+
+.btn {
+  border: none;
+
+  border-radius: 50px;
+
+  padding: 15px 32px;
+
+  font-family: inherit;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(190, 50, 100, 0.18);
+}
+
+
+/* =========================================
+   YES BUTTON
+========================================= */
+
+.yes-btn {
+  background: #f43f76;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(244, 63, 118, 0.25);
+}
+
+.yes-btn:hover {
+  background: #ed356d;
+}
+
+
+/* =========================================
+   NO BUTTON
+========================================= */
+
+.no-btn {
+  background: #ffffff;
+
+  color: #b52f63;
+
+  border: 2px solid #ffc5d8;
+
+  position: relative;
+
+  z-index: 999;
+
+  transition:
+    left 0.25s ease,
+    top 0.25s ease;
+}
+
+
+/* =========================================
+   FIRST PAGE NO BUTTON
+========================================= */
+
+#startNo {
+  position: relative;
+
+  z-index: 9999;
+
+  pointer-events: auto;
+}
+
+
+/* =========================================
+   MEMORY TEST NO BUTTON
+========================================= */
+
+#salaryNo {
+  position: relative;
+
+  z-index: 9999;
+
+  pointer-events: auto;
+
+  transition:
+    left 0.25s ease,
+    top 0.25s ease;
+}
+
+
+/* =========================================
+   CONTINUE BUTTON
+========================================= */
+
+.continue-btn {
+  margin-top: 25px;
+}
+
+
+/* =========================================
+   TINY NOTE
+========================================= */
+
+.tiny-note {
+  color: #a66b80;
+
+  font-size: 13px;
+
+  margin-top: 20px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   MESSAGE BOX
+========================================= */
+
+.message-box {
+  margin: 20px 0;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  background: #fff0f5;
+
+  color: #9a506c;
+
+  line-height: 1.6;
+
+  border: 1px solid #ffd5e3;
+}
+
+.message-box strong {
+  color: #c23b6d;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* =========================================
+   SALARY QUOTE
+========================================= */
+
+.salary-quote {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 25px 0;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  background: #fff0f5;
+
+  color: #c23b6d;
+
+  font-size: 21px;
+
+  border: 1px solid #ffd5e3;
+}
+
+
+/* =========================================
+   BOARDING PASS
+========================================= */
+
+.boarding-pass {
+  margin: 25px auto;
+
+  padding: 25px;
+
+  max-width: 600px;
+
+  text-align: left;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff7fb,
+      #ffeaf3
+    );
+
+  border: 2px dashed #efa4bd;
+
+  box-shadow:
+    0 10px 30px rgba(190, 60, 110, 0.08);
+}
+
+.boarding-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px dashed #dfa0b7;
+}
+
+.airline-name {
+  color: #d63f73;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.flight-name {
+  color: #a66b80;
+
+  font-size: 12px;
+
+  margin-top: 4px;
+}
+
+.boarding-plane {
+  font-size: 35px;
+}
+
+.boarding-route {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 25px 0;
+}
+
+.passenger {
+  text-align: center;
+
+  color: #b52f63;
+}
+
+.passenger-emoji {
+  display: block;
+
+  font-size: 30px;
+
+  margin-bottom: 5px;
+}
+
+.passenger small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #a66b80;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.route-line {
+  color: #e24578;
+
+  white-space: nowrap;
+}
+
+.boarding-info {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 18px;
+
+  padding-top: 20px;
+
+  border-top: 1px dashed #dfa0b7;
+}
+
+.boarding-info span {
+  display: block;
+
+  font-size: 11px;
+
+  color: #a66b80;
+
+  margin-bottom: 5px;
+}
+
+.boarding-info strong {
+  color: #8f5269;
+
+  font-size: 14px;
+}
+
+.confirmed {
+  color: #3e9b60 !important;
+}
+
+.boarding-footer {
+  margin-top: 20px;
+
+  padding-top: 15px;
+
+  border-top: 1px dashed #dfa0b7;
+
+  text-align: center;
+
+  color: #a66b80;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   CALENDAR
+========================================= */
+
+.calendar {
+  max-width: 500px;
+
+  margin: 25px auto;
+
+  padding: 20px;
+
+  border-radius: 22px;
+
+  background: #fff7fa;
+
+  border: 1px solid #ffd9e5;
+}
+
+.calendar-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  color: #b52f63;
+}
+
+.month-arrow {
+  width: 40px;
+
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffe1ec;
+
+  color: #d94f82;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+.month-arrow:hover {
+  background: #ffc8da;
+}
+
+.weekdays,
+.calendar-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 7px;
+}
+
+.weekdays span {
+  font-size: 12px;
+
+  color: #a66b80;
+
+  font-weight: 800;
+}
+
+.calendar-day {
+  width: 100%;
+
+  aspect-ratio: 1;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #8f5269;
+
+  font-family: inherit;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background: #ffe1ec;
+
+  color: #c23b6d;
+}
+
+.calendar-day.selected {
+  background: #f43f76;
+
+  color: white;
+}
+
+.calendar-day.empty {
+  background: transparent;
+
+  cursor: default;
+}
+
+
+/* =========================================
+   PLAN GRID
+========================================= */
+
+.plan-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 15px;
+
+  margin: 25px 0;
+}
+
+.plan-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px;
+
+  border: 2px solid #f4dce6;
+
+  border-radius: 18px;
+
+  background: white;
+
+  color: #8f5269;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.plan-option:hover {
+  transform: translateY(-2px);
+
+  border-color: #f39ab8;
+}
+
+.plan-option.selected {
+  background: #fff0f5;
+
+  border-color: #ff6f9f;
+}
+
+.plan-icon {
+  font-size: 30px;
+}
+
+.plan-option strong {
+  display: block;
+
+  color: #b52f63;
+
+  font-size: 16px;
+}
+
+.plan-option small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #a66b80;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   FINAL CARD
+========================================= */
+
+.final-card {
+  margin: 25px 0;
+
+  padding: 25px;
+
+  border-radius: 22px;
+
+  background: #fff5f9;
+
+  border: 1px solid #ffd9e5;
+
+  text-align: left;
+}
+
+.final-title {
+  text-align: center;
+
+  color: #d63f73;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.final-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #f2dce5;
+}
+
+.final-row span {
+  color: #a66b80;
+}
+
+.final-row strong {
+  color: #b52f63;
+
+  text-align: right;
+}
+
+.final-status {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: 15px;
+
+  background: #e5f8ea;
+
+  color: #3e9b60;
+
+  text-align: center;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .page {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 30px 18px;
+
+    border-radius: 24px;
+  }
+
+  .header_text {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .question {
+    font-size: 21px;
+  }
+
+  .gif_container img {
+    width: 220px;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 13px 22px;
+
+    font-size: 16px;
+  }
+
+  .boarding-route {
+    flex-direction: column;
+  }
+
+  .route-line {
+    transform: rotate(90deg);
+  }
+
+  .boarding-info {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-row {
+    flex-direction: column;
+
+    gap: 6px;
+  }
+
+  .final-row strong {
+    text-align: left;
+  }
+
+}
