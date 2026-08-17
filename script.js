@@ -956,7 +956,7 @@ if (sendDetails) {
 Namma Chennai → ITC Grand Chola
 
 👥 Passengers
-🐶 Shiro + 🐗 Inosuke + 🐼 Panda
+🐶 Shiro + 🐼 Panda + 🐗 Inosuke
 
 📅 Date options
 ${dates}
